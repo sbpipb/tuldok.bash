@@ -1,7 +1,4 @@
-#
-
 # ~/.bashrc
-#
 
 [[ $- != *i* ]] && return
 
@@ -9,18 +6,17 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 alias v='vim'
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -lah'
-alias l='ls -CF'
+alias ll='ls -alFh'
+
+# alias la='ls -lah'
+# alias l='ls -CF'
 
 alias bes='bundle exec rails s'
 alias becs='bundle exec rails console'
 
 alias prnto='bundle exec pronto run -c origin/develop'
-alias dcm='docker-compose'
-#alias dr='docker-compose run --rm --service-ports web'
-alias dr='docker-compose run'
+alias dc='docker-compose'
+alias dr='docker-compose run --rm --service-ports web'
 alias gst='git status'
 alias gpr='git pull --rebase origin'
 alias gp='git push'
@@ -169,3 +165,7 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 . $HOME/.asdf/completions/asdf.bash
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
